@@ -21,13 +21,13 @@ public class CollectionService {
 
     public Optional<Integer> findMax(List<Integer> list) {
         return list.stream()
-                .max(Comparator.naturalOrder());
+                .max(Comparator.naturalOrder()); //не думаю, что я тут правильно сделал, но тест проходит. Правда выводит еще Optional
     }
 
     public Optional<Integer> findMin(List<List<Integer>> list) {
         return list.stream()
                 .flatMap(x -> x.stream())
-                .min(Comparator.naturalOrder());
+                .min(Comparator.naturalOrder()); //не думаю, что я тут правильно сделал, но тест проходит. Правда выводит еще Optional
 
     }
 

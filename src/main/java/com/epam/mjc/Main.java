@@ -3,7 +3,6 @@ package com.epam.mjc;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +17,17 @@ public class Main {
         List<String> modifiedStringList = collectionService.toUpperCaseCollection(initialStringList);
         System.out.println(modifiedStringList);
 
-        System.out.println(collectionService.findMax(initialIntList));
+        System.out.print(collectionService.findMax(initialIntList));
+        System.out.println(" - ????? почему выводит еще и Optional");
+
+        List<Integer> initialIntList01 = new ArrayList<>(Arrays.asList(1, 2, 8, 9));
+        List<Integer> initialIntList02 = new ArrayList<>(Arrays.asList(1, 3, 2, 8));
+        List<Integer> initialIntList03 = new ArrayList<>(Arrays.asList(2, 8, 9));
+        List<List<Integer>> listOfLists = new ArrayList<>(Arrays.asList(initialIntList01, initialIntList02, initialIntList03));
+
+        System.out.print(collectionService.findMin(listOfLists));
+        System.out.println(" - ????? почему выводит еще и Optional");
+
         System.out.println(collectionService.sum(initialIntList));
     }
 }
