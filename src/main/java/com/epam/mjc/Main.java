@@ -19,6 +19,7 @@ public class Main {
 
         System.out.print(collectionService.findMax(initialIntList));
         System.out.println(" - ????? почему выводит еще и Optional");
+        System.out.println(collectionService.findMax(initialIntList).get());
 
         List<Integer> initialIntList01 = new ArrayList<>(Arrays.asList(1, 2, 8, 9));
         List<Integer> initialIntList02 = new ArrayList<>(Arrays.asList(1, 3, 2, 8));
@@ -27,6 +28,7 @@ public class Main {
 
         System.out.print(collectionService.findMin(listOfLists));
         System.out.println(" - ????? почему выводит еще и Optional");
+        System.out.println(collectionService.findMin(listOfLists).get());
 
         System.out.println(collectionService.sum(initialIntList));
     }
