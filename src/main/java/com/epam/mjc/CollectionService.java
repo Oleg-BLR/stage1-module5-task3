@@ -49,6 +49,12 @@ public class CollectionService {
 //                .max(Comparator.naturalOrder()); //не думаю, что я тут правильно сделал, но тест проходит. Правда выводит еще Optional
 //    }
 
+//    public Integer findMax(List<Integer> list) {
+//        return list.stream()
+//                .max(Comparator.naturalOrder()).get(); //не думаю, что я тут правильно сделал, но тест проходит. Правда выводит еще Optional
+//    }
+
+
 
 //    public Optional<Integer> findMin(List<List<Integer>> list) {
 //        // https://www.baeldung.com/java-difference-map-and-flatmap
